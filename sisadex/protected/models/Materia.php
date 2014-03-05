@@ -160,4 +160,17 @@ class Materia extends CActiveRecord
             'order' => $orderBy
             ));
     }
+
+
+    public function existsInDatabase($nombreMateria) {
+            $criteria = new CDbCriteria();
+            $criteria->select = 'nombreMateria';
+            $criteria->condition = 'LOWER(nombreMateria)=:nombreMateria';
+            $criteria->params = array(
+            ':nombreMateria' => strtolower($nombreMateria),
+             );
+            $records = Materia::model()->find($criteria);
+            return (count($records) > 0);
+    }
 }
+

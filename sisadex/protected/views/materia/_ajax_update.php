@@ -13,14 +13,15 @@ function update()
     url: '<?php echo Yii::app()->createAbsoluteUrl("materia/update"); ?>',
    data:data,
 success:function(data){
+  console.log(data);
                 if(data=="true")
                  {
                   $('#materia-update-modal').modal('hide');
-                //  renderView(data);
+                  //renderView(data);
                   $.fn.yiiGridView.update('materia-grid', {
                      
                          });
-                 }else
+                 }  else
                  {
                   if (data=="exists") {
                     $('#materia-update-modal').modal('hide');
@@ -28,14 +29,13 @@ success:function(data){
                  }
                   if (data=="false") {
                   $('#materia-update-modal').modal('hide');
-                   bootbox.alert("<div id='error-modal' class='alert alert-error spa6'>Por favor corrija los siguientes errores de ingreso:<ul><li>El campo no puede ser vacio.</li></ul></div>");  
+                   bootbox.alert("<div id='error-modal' class='alert alert-error spa6'>Por favor corrija los siguientes errores de ingreso:<ul><li>Los campos no pueden ser vacios.</li><li>Complejidad debe ser un número entre 1 y 10</li></ul></div>");  
                  }
                }
                  
               },
    error: function(data) { // if error occured
-                    $('#materia-update-modal').modal('hide');
-   		bootbox.alert("Se ha producido un error interno. Contacte al administrador.");
+          alert(JSON.stringify(data)); 
 
     },
 
@@ -60,8 +60,9 @@ success:function(data){
                  $('#materia-update-modal').modal('show');
               },
    error: function(data) { // if error occured
-          //    alert(JSON.stringify(data)); 
-     		 bootbox.alert("Se ha producido un error interno. Contacte al administrador.");
+       //    alert(JSON.stringify(data)); 
+     $('#materia-view-modal').modal('hide');
+         bootbox.alert("Se ha producido un error interno. Contacte al administrador.");
     },
 
   dataType:'html'

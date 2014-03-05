@@ -167,4 +167,19 @@ class Tipoexamen extends CActiveRecord
             return $tipo->id;
         }
     }
+
+        public function existsInDatabase($nombreTipoExamen, $Materia_id, $id) {
+            
+            $criteria = new CDbCriteria();
+            $criteria->select = 'nombreTipoExamen, Materia_id';
+            $criteria->condition = 'LOWER(nombreTipoExamen)=:nombreTipoExamen AND Materia_id=:Materia_id AND id!=:id';
+            $criteria->params = array(
+            ':nombreTipoExamen' => strtolower($nombreTipoExamen),
+            ':Materia_id' => $Materia_id,
+            ':id' => $id
+                );
+            $records = Tipoexamen::model()->find($criteria);
+            return (count($records) > 0);
+        }
+
 }

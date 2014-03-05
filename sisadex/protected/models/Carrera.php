@@ -126,4 +126,16 @@ class Carrera extends CActiveRecord
                 )
             ));
     }
+
+
+    public function existsInDatabase($nombreCarrera) {
+            $criteria = new CDbCriteria();
+            $criteria->select = 'nombreCarrera';
+            $criteria->condition = 'LOWER(nombreCarrera)=:nombreCarrera';
+            $criteria->params = array(
+            ':nombreCarrera' => strtolower($nombreCarrera),
+             );
+            $records = Carrera::model()->find($criteria);
+            return (count($records) > 0);
+    }
 }

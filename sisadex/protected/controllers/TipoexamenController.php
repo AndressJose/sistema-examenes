@@ -119,16 +119,8 @@ class TipoexamenController extends Controller
                         $Materia_id = -1;
                     else
                         $Materia_id = Yii::app()->user->name;
-                    $criteria = new CDbCriteria();
-                    $criteria->select = 'nombreTipoExamen, Materia_id';
-                    $criteria->condition = 'LOWER(nombreTipoExamen)=:nombreTipoExamen AND Materia_id=:Materia_id AND id!=:id';
-                    $criteria->params = array(
-                        ':nombreTipoExamen' => strtolower($_POST['Tipoexamen']['nombreTipoExamen']),
-                        ':Materia_id' => $Materia_id,
-                        ':id' => $id
-                        );
-                    $records = Tipoexamen::model()->find($criteria);
-                    if (count($records) > 0) {
+          
+                    if (Tipoexamen::model()->existsInDatabase($_POST['Tipoexamen']['nombreTipoExamen'],$Materia_id,$id)) {
                         echo "exists";
                         return;
                     } 

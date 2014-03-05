@@ -8846,3 +8846,82 @@ Stack trace:
 REQUEST_URI=/sistema-examenes/sisadex/index.php?r=users/index
 in /srv/http/sistema-examenes/sisadex/protected/controllers/UsersController.php (185)
 in /srv/http/sistema-examenes/sisadex/index.php (13)
+2014/03/04 20:28:48 [warning] [application] Error al establecer unsafe al atributo "id" de "Tipoexamen".
+in /srv/http/sistema-examenes/sisadex/protected/controllers/TipoexamenController.php (135)
+in /srv/http/sistema-examenes/sisadex/index.php (13)
+2014/03/05 00:08:08 [error] [exception.CHttpException.Se produjo un error al intentar almacenar los datos. Contacte al administrador.] exception 'CHttpException' in /srv/http/sistema-examenes/sisadex/protected/controllers/MateriaController.php:128
+Stack trace:
+#0 /srv/http/sistema-examenes/yii/framework/web/actions/CInlineAction.php(49): MateriaController->actionUpdate()
+#1 /srv/http/sistema-examenes/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /srv/http/sistema-examenes/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /srv/http/sistema-examenes/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /srv/http/sistema-examenes/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /srv/http/sistema-examenes/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /srv/http/sistema-examenes/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /srv/http/sistema-examenes/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /srv/http/sistema-examenes/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /srv/http/sistema-examenes/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#10 /srv/http/sistema-examenes/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('materia/update')
+#11 /srv/http/sistema-examenes/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /srv/http/sistema-examenes/sisadex/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/sistema-examenes/sisadex/index.php?r=materia/update
+HTTP_REFERER=http://localhost/sistema-examenes/sisadex/index.php?r=materia/index
+---
+2014/03/05 00:08:17 [error] [exception.CHttpException.Se produjo un error al intentar almacenar los datos. Contacte al administrador.] exception 'CHttpException' in /srv/http/sistema-examenes/sisadex/protected/controllers/MateriaController.php:128
+Stack trace:
+#0 /srv/http/sistema-examenes/yii/framework/web/actions/CInlineAction.php(49): MateriaController->actionUpdate()
+#1 /srv/http/sistema-examenes/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /srv/http/sistema-examenes/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /srv/http/sistema-examenes/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /srv/http/sistema-examenes/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /srv/http/sistema-examenes/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /srv/http/sistema-examenes/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /srv/http/sistema-examenes/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /srv/http/sistema-examenes/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /srv/http/sistema-examenes/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#10 /srv/http/sistema-examenes/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('materia/update')
+#11 /srv/http/sistema-examenes/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /srv/http/sistema-examenes/sisadex/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/sistema-examenes/sisadex/index.php?r=materia/update
+HTTP_REFERER=http://localhost/sistema-examenes/sisadex/index.php?r=materia/index
+---
+2014/03/05 00:09:27 [error] [exception.CHttpException.Se produjo un error al intentar almacenar los datos. Contacte al administrador.] exception 'CHttpException' in /srv/http/sistema-examenes/sisadex/protected/controllers/MateriaController.php:128
+Stack trace:
+#0 /srv/http/sistema-examenes/yii/framework/web/actions/CInlineAction.php(49): MateriaController->actionUpdate()
+#1 /srv/http/sistema-examenes/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /srv/http/sistema-examenes/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /srv/http/sistema-examenes/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /srv/http/sistema-examenes/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /srv/http/sistema-examenes/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /srv/http/sistema-examenes/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /srv/http/sistema-examenes/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /srv/http/sistema-examenes/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /srv/http/sistema-examenes/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#10 /srv/http/sistema-examenes/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('materia/update')
+#11 /srv/http/sistema-examenes/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /srv/http/sistema-examenes/sisadex/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/sistema-examenes/sisadex/index.php?r=materia/update
+HTTP_REFERER=http://localhost/sistema-examenes/sisadex/index.php?r=materia/index
+---
+2014/03/05 00:10:04 [error] [exception.CHttpException.Se produjo un error al intentar almacenar los datos. Contacte al administrador.] exception 'CHttpException' in /srv/http/sistema-examenes/sisadex/protected/controllers/MateriaController.php:128
+Stack trace:
+#0 /srv/http/sistema-examenes/yii/framework/web/actions/CInlineAction.php(49): MateriaController->actionUpdate()
+#1 /srv/http/sistema-examenes/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /srv/http/sistema-examenes/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /srv/http/sistema-examenes/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /srv/http/sistema-examenes/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /srv/http/sistema-examenes/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /srv/http/sistema-examenes/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /srv/http/sistema-examenes/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /srv/http/sistema-examenes/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /srv/http/sistema-examenes/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#10 /srv/http/sistema-examenes/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('materia/update')
+#11 /srv/http/sistema-examenes/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /srv/http/sistema-examenes/sisadex/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/sistema-examenes/sisadex/index.php?r=materia/update
+HTTP_REFERER=http://localhost/sistema-examenes/sisadex/index.php?r=materia/index
+---
