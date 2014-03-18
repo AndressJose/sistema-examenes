@@ -134,10 +134,10 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/js/examenCr
         <?php if (Yii::app()->user->isAdmin())
         echo "var materia_id= $('#Examen_1_materia_id').val();" ;
         else  echo "var materia_id= ".Yii::app()->user->name.";";?>
-        var action = 'index.php?r=examen/CheckExamenOnSameDay&fechaExamen=' + fechaExamen + '&materia_id=' + materia_id;
+        var action = 'CheckExamenOnSameDay/fechaExamen/' + fechaExamen + '/materia_id/' + materia_id;
         $('#reportarerror').html("");
         $.getJSON(action,function (respuesta) {
-            console.log(respuesta);
+            // console.log(respuesta);
             if (respuesta == "true") {
                 $('#msjError').slideDown('fast');
             }

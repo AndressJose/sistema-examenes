@@ -56,7 +56,7 @@ function getInfoFromServer() {
  
  $.ajax({
   type: "POST",
-  url: 'index.php?r=metrica/GetExamsEvolution',
+  url: 'GetExamsEvolution',
   data: {materias:jsonStringSubjects, planes:jsonStringPlans}, 
   cache: false,
 
@@ -81,7 +81,7 @@ function refreshInfoFromServer() {
 
  $.ajax({
   type: "POST",
-  url: 'index.php?r=metrica/RefreshExamsEvolution',
+  url: 'RefreshExamsEvolution',
   data: {materias:jsonStringSubjects, planes:jsonStringPlans, anios:jsonStringYears, cuatrimestres:jsonStringCuats}, 
   cache: false,
 

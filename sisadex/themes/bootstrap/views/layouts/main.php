@@ -6,7 +6,9 @@ $cs = Yii::app ()->getClientScript ();
 $cs->registerScriptFile ( $baseUrl . '/js/bootbox.js' );
 
 ?>
-
+<script>
+var baseUrl="<?php print Yii::app()->request->baseUrl;?>";
+</script>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -152,9 +154,9 @@ $this->widget ( 'bootstrap.widgets.TbNavbar', array (
 		<div id="browsers">
 			Recomendamos <a href="https://www.google.com/chrome"
 				style="margin-right: 5px" target="_blank"> <img
-				src="images/googleChrome.png">
+				src="<?php echo Yii::app()->baseUrl.'/images/googleChrome.png'?>">
 			</a> <a href="http://www.mozilla.org/firefox/" target="_blank"> <img
-				src="images/mozillaFirefox.png">
+				src="<?php echo Yii::app()->baseUrl.'/images/mozillaFirefox.png'?>">
 			</a>
 
 		</div>

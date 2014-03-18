@@ -69,7 +69,7 @@ $this->widget('bootstrap.widgets.TbMenu', array(
 ?>
 <script type="text/javascript">
     function delete_record(id) {
-        bootbox.confirm("<img src='images/warning.png'/>  ¿Está seguro de eliminar esta carrera?<br/><br/> <p class='text-warning'>Se eliminarán todos los examenes asociados a ella.</p>", function (result) {
+        bootbox.confirm("<img src='"+baseUrl+"/images/warning.png'/>  ¿Está seguro de eliminar esta carrera?<br/><br/> <p class='text-warning'>Se eliminarán todos los examenes asociados a ella.</p>", function (result) {
             if (!result) return;
             var data = "id=" + id;
             jQuery.ajax({
@@ -96,7 +96,7 @@ $this->widget('bootstrap.widgets.TbMenu', array(
     }
     function delete_all_records() {
         bootbox.dialog({
-            message: "<img src='images/warning.png'/>  Se eliminarán todos las carreras y los planes asociados a ellas.<br/> <br/>Por seguridad debe ingresar la contraseña de adminsitrador<br/><br/><input type='password' id ='pass' class='span3' ></input>",
+            message: "<img src='"+baseUrl+"/images/warning.png'/>  Se eliminarán todos las carreras y los planes asociados a ellas.<br/> <br/>Por seguridad debe ingresar la contraseña de adminsitrador<br/><br/><input type='password' id ='pass' class='span3' ></input>",
             title: "Confirmar eliminación",
             buttons: {
                 cancelar: {
