@@ -114,7 +114,7 @@ $grid = $this->widget('bootstrap.widgets.TbGridView', array(
             // Nombre del dato en el modelo
             'value' => '$data->materia->id." - ".$data->materia->nombreMateria',
             'headerHtmlOptions' => array(
-                'style' => 'width:550px'
+                'style' => 'width:490px'
             ),
             // Opciones HTML
             'filter' => CHtml::listData(Materia::model()->getTodasLasMaterias('nombreMateria'), 'id', 'concatened') // Colocamos un combo en el filtro
@@ -126,7 +126,7 @@ $grid = $this->widget('bootstrap.widgets.TbGridView', array(
             // Nombre del dato en el modelo
             'value' => '$data->tipoexamen->nombreTipoExamen',
             'headerHtmlOptions' => array(
-                'style' => 'width:200px'
+                'style' => 'width:240px'
             ),
             // Opciones HTML
             'filter' => CHtml::listData(Tipoexamen::model()->findAll(array('order' => 'nombreTipoExamen')), 'id', 'nombreTipoExamen') // Colocamos un combo en el filtro

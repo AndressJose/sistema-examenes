@@ -6,9 +6,7 @@ $cs = Yii::app ()->getClientScript ();
 $cs->registerScriptFile ( $baseUrl . '/js/bootbox.js' );
 
 ?>
-<script>
-var baseUrl="<?php print Yii::app()->request->baseUrl;?>";
-</script>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -31,10 +29,12 @@ body {
 	background-color: #354C75;
 }
 </style>
+<script>
+var baseUrl="<?php print Yii::app()->request->baseUrl;?>";
+</script>
 <body>
 
 <?php
-
 $this->widget ( 'bootstrap.widgets.TbNavbar', array (
 		'items' => array (
 				array (
@@ -50,17 +50,17 @@ $this->widget ( 'bootstrap.widgets.TbNavbar', array (
 								),
 								
 								array (
-										'label' => 'Metricas',
+										'label' => 'Métricas',
 										'icon' => 'icon-signal',
 										'url' => array (
-												'/metrica/calendar' 
+												'metrica/calendar' 
 										) 
 								),
 								array (
 										'label' => 'Materias',
 										'icon' => 'icon-book',
 										'url' => array (
-												'/materia/index' 
+												'materia/index' 
 										),
 										'visible' => Yii::app ()->user->isadmin () 
 								),
