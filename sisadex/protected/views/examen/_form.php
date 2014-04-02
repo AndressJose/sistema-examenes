@@ -69,7 +69,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/js/examenCr
                             <?php echo CHtml::activeDropDownList($modelos[$i], "[$i]tipoexamen_id",
                                 CHtml::listData(Tipoexamen::model()->getTiposExamenes(Yii::app()->user->name),
                                     'id', 'nombreTipoExamen') + array(-1 => 'otro'),
-                                array('onChange' => 'javascript:test(this)'),
+                                array('onChange' => 'javascript:fillTipoPersonalizado(this)'),
                                 array('options' => array(
                                     $modelos[$i]->tipoexamen_id => array('selected' => true)), 'empty' => '-Por favor seleccione-')); ?>
                         </div>
